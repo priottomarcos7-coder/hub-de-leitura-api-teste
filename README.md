@@ -93,3 +93,102 @@ https://github.com/priottomarcos7-coder/hub-de-leitura-api-teste
 Marcos Priotto
 
 Projeto desenvolvido como parte da formação em Engenharia de Qualidade de Software na EBAC.
+---
+
+# English Version
+
+# Automated REST API Tests — Reading Hub
+
+## Goal
+
+REST API test automation project for the Reading Hub application, developed during Software Quality Engineering training.
+
+The goal is to validate endpoints, HTTP status codes, response properties, and business rules across positive and negative scenarios.
+
+## Technologies
+
+- Cypress 15.11.0
+- Cypress API Plugin
+- JavaScript
+- Node.js
+- REST API
+
+## Prerequisites
+
+- Node.js installed
+- npm installed
+- Git
+- Reading Hub API available and configured for testing
+
+## Installation
+
+Clone the repository:
+
+```bash
+git clone https://github.com/priottomarcos7-coder/hub-de-leitura-api-teste.git
+cd hub-de-leitura-api-teste
+```
+
+Install the dependencies:
+
+```bash
+npm install
+```
+
+## Running the Tests
+
+Since this project's `package.json` does not define a test script, run Cypress directly:
+
+```bash
+npx cypress run
+```
+
+To open the Cypress UI:
+
+```bash
+npx cypress open
+```
+
+## Automated Scenarios
+
+The tests include:
+
+- GET to list users
+- GET a user by ID
+- GET using filters and parameters
+- Validation of properties in returned user records
+- POST to create a user
+- Validation of an invalid email address
+- PUT to update a user
+- PUT using a dynamically obtained user ID
+- DELETE a user
+- DELETE using a dynamically obtained ID
+
+## Testing Strategy
+
+Positive and negative scenarios, HTTP status code validation, and response-content validation were used. Dynamic data was also used to reduce dependence on fixed records.
+
+## Main Structure
+
+```text
+cypress/
+└── e2e/
+    └── usuarios.cy.js
+
+cypress.config.js
+package.json
+```
+
+## Expected Results
+
+Cypress should display the result of each scenario, helping identify correct responses, failures, and behaviors that require further investigation.
+
+## Repository
+
+https://github.com/priottomarcos7-coder/hub-de-leitura-api-teste
+
+## Author
+
+Marcos Priotto
+
+Project developed as part of the Software Quality Engineering training program at EBAC.
